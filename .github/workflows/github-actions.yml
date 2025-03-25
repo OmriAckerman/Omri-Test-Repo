@@ -1,18 +1,10 @@
-name: Test Runner
-
+name: Actions Runner Controller Demo
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:  # Allows manual triggering from GitHub UI
+  workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: self-hosted  # This specifies the job will run on the self-hosted runner
-
+  Explore-GitHub-Actions:
+    # You need to use the INSTALLATION_NAME from the previous step
+    runs-on: arc-runner-set
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run some task
-        run: echo "GitHub Actions runner is running on Kubernetes!"
+    - run: echo "🎉 This job uses runner scale set runners!"
