@@ -1,6 +1,9 @@
 name: Actions Runner Controller Demo
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering from GitHub UI
 
 jobs:
   Explore-GitHub-Actions:
